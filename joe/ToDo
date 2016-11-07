@@ -1,0 +1,14 @@
+Distinguish between 2 users
+
+Train a few models
+
+1. Read in CSVs in Java
+2. Generate vectors to input to ML algorithm
+	2.1 Features
+		2.1.1 Average flight time
+		2.1.2 Average dwell time
+		2.1.3 Average 'Shift' hold time
+3. Train a classifier on generated vectors
+4. feed test data into it
+
+
