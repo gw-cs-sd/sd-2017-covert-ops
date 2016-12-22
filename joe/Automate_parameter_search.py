@@ -161,7 +161,7 @@ left_hand_keys = ['q','w','e','r','g','a','s','d','f','g','z','x','c','v'];
 subject_lorem_keystrokes = json.loads(lorem_ipsum['keystrokes'].iloc[0])[0]
 len(subject_lorem_keystrokes)
 # There are 1456 keystroke events. We will divide these into groups of 16, giving us 91 records
-split_keystrokes = [subject_lorem_keystrokes[x:x+15] for x in range(0, len(subject_lorem_keystrokes),16)]
+split_keystrokes = [subject_lorem_keystrokes[x:x+15] for x in range(0, len(subject_lorem_keystrokes),number_of_chars_per_observation)]
 
 descriptive_stats = [];
 for n in split_keystrokes:

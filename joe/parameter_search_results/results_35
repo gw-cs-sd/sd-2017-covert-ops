@@ -1,0 +1,7 @@
+DecisionTree: 0.259259259259
+MultiLayer Perceptron: 0.481481481481
+SupportVectorMachine: 0.259259259259
+LDA: 0.259259259259
+GaussianNB: 0.444444444444
+RandomForest: 0.259259259259
+GradientBoostingClassifier: 0.259259259259
