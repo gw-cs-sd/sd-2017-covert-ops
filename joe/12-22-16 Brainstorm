@@ -1,0 +1,4 @@
+12-22-16 Brainstorm
+
+- DwellTime features for each two-key pair appearing in the training corpus
+	- Anomaly detection won't even happen until the correct password is typed, so we can assume each bigram will be present 
