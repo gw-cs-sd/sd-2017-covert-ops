@@ -1,0 +1,1 @@
+Mozilla/5.0 (X11; U; Linux x86_64; fr; rv:1.9.2.15) Gecko/20110303 Ubuntu/10.10 (maverick) Firefox/3.6.15
