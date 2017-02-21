@@ -16,7 +16,7 @@ releases = [];
 
 def on_press(key):
 	print ('{0} pressed'.format(key));
-	presses.append({key: time.time()});
+	presses.append({str(key): time.time()});
 
 def on_release(key):
 	print('{0} release'.format(key));
@@ -26,15 +26,16 @@ def on_release(key):
 	elif key==Key.enter:
 		process_timestamps();
 	else:
-		releases.append({key: time.time()});
+		releases.append({str(key): time.time()});
 
 def process_timestamps():
 	print (presses);
 	print ();
 	print (releases);
-	raw.writelines(str(presses));
-	raw.writelines("\n");
-	raw.writelines(str(releases));
+	# raw.writelines(str(presses));
+	# raw.writelines(str(releases));
+	master = {"presses": presses, "releases": releases};
+	json.dump(master, raw);
 	# json.dump(presses,raw)
 	# json.dump(releases,raw)
 	raw.close();
