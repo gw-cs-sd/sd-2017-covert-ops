@@ -1,12 +1,15 @@
 import time;
 import os;
-from pynput.keyboard import Key, Listener
+from pynput.keyboard import Key, Listener;
+import json;
 
 t0 = str(time.time());
 user = input('What is your username?');
-if not os.path.exists(user+"/"+t0):
-	os.makedirs(user+"/"+t0);
+if not os.path.exists("keystrokes/"+user+"/"+t0):
+	os.makedirs("keystrokes/"+user+"/"+t0);
 raw = open("keystrokes/"+user+"/"+t0+"/raw", 'w+');
+
+running = True;
 
 presses = [];
 releases = [];
@@ -21,7 +24,6 @@ def on_release(key):
 		# Stop listener
 		return False
 	elif key==Key.enter:
-		raw.close();
 		process_timestamps();
 	else:
 		releases.append({key: time.time()});
@@ -30,11 +32,19 @@ def process_timestamps():
 	print (presses);
 	print ();
 	print (releases);
+	raw.writelines(str(presses));
+	raw.writelines("\n");
+	raw.writelines(str(releases));
+	# json.dump(presses,raw)
+	# json.dump(releases,raw)
+	raw.close();
+
 
 def main():
+	time.sleep(1);
+	print ("Enter your password: ");
 	with Listener(
 	        on_press=on_press,
 	        on_release=on_release) as listener:
 	    listener.join()
-
 main();
