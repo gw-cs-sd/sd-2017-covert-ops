@@ -1,3 +1,5 @@
+# Records username and timestampped key events for password entry to a JSON object
+
 import time;
 import os;
 from pynput.keyboard import Key, Listener;
@@ -16,7 +18,11 @@ releases = [];
 
 def on_press(key):
 	print ('{0} pressed'.format(key));
-	presses.append({str(key): time.time()});
+	if str(key)[:3]=='Key':
+		print("skipping non-alphabetic characters");
+		pass;
+	else:
+		presses.append({str(key): time.time()});
 
 def on_release(key):
 	print('{0} release'.format(key));
@@ -25,6 +31,10 @@ def on_release(key):
 		return False
 	elif key==Key.enter:
 		process_timestamps();
+		return False;
+	elif str(key)[:3]=='Key':
+		print("skipping non-alphabetic characters");
+		pass;
 	else:
 		releases.append({str(key): time.time()});
 
@@ -32,12 +42,8 @@ def process_timestamps():
 	print (presses);
 	print ();
 	print (releases);
-	# raw.writelines(str(presses));
-	# raw.writelines(str(releases));
 	master = {"presses": presses, "releases": releases};
 	json.dump(master, raw);
-	# json.dump(presses,raw)
-	# json.dump(releases,raw)
 	raw.close();
 
 
@@ -45,7 +51,8 @@ def main():
 	time.sleep(1);
 	print ("Enter your password: ");
 	with Listener(
-	        on_press=on_press,
-	        on_release=on_release) as listener:
-	    listener.join()
+        on_press=on_press,
+        on_release=on_release) as listener:
+    		listener.join();
+
 main();
