@@ -62,6 +62,31 @@ for dir in os.listdir('keystrokes/unprocessed'):
 				r_to_r = release_to_release(master);
 				print ("\nRelease to Release times:");
 				print (r_to_r);
-
 				# - Save results in 4 files: pp, pr, rp, and rr
-				# - rename directory into the "processed" directory
+				if not os.path.exists("keystrokes/processed/"+dir+"/"+k):
+					os.makedirs("keystrokes/processed/"+dir+"/"+k);
+				# Move raw
+				os.rename('keystrokes/unprocessed/'+dir+"/"+k+"/raw", 'keystrokes/processed/'+dir+"/"+k+"/raw");
+				
+				pp = open('keystrokes/processed/'+dir+"/"+k+"/p_pp.txt", "w+");
+				for n in p_to_p:
+					pp.write(str(n)+"\n");
+				pp.close();
+
+				pr = open('keystrokes/processed/'+dir+"/"+k+"/p_pr.txt", "w+");
+				for n in p_to_r:
+					pr.write(str(n)+"\n");
+				pr.close();
+
+				rp = open('keystrokes/processed/'+dir+"/"+k+"/p_rp.txt", "w+");
+				for n in r_to_p:
+					rp.write(str(n)+"\n");
+				rp.close();
+
+				rr = open('keystrokes/processed/'+dir+"/"+k+"/p_rr.txt", "w+");
+				for n in r_to_r:
+					rr.write(str(n)+"\n");
+				rr.close();
+				# - remove unprocessed directory
+				os.rmdir('keystrokes/unprocessed/'+dir+"/"+k);
+		os.rmdir('keystrokes/unprocessed/'+dir);
