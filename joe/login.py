@@ -21,7 +21,7 @@ def on_press(key):
 		print("skipping non-alphabetic characters");
 		pass;
 	else:
-		presses.append({str(key): time.time()});
+		presses.append((str(key), time.time()));
 
 def on_release(key):
 	print('{0} release'.format(key));
@@ -35,7 +35,7 @@ def on_release(key):
 		print("skipping non-alphabetic characters");
 		pass;
 	else:
-		releases.append({str(key): time.time()});
+		releases.append((str(key), time.time()));
 
 def process_timestamps():
 	print (presses);
