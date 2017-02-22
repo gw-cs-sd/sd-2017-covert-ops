@@ -23,10 +23,12 @@ for dir in os.listdir('keystrokes/unprocessed'):
 	    	if k!='.DS_Store':
 		    	# 'k' is a particular timestamp directory, containing 'raw'
 		    	print ("--"+k);
-
-# - Apply GREY-C functions to each raw file
-# - Save results in 4 files: pp, pr, rp, and rr
-# - rename directory into the "processed" directory
+		    	with open("keystrokes/unprocessed/"+dir+"/"+k+"/raw") as data_file:    
+					master = json.load(data_file);
+				password = ([list(n.keys())[0].replace("'","") for n in master['presses']]);
+		    	# - Apply GREY-C functions to each raw file
+				# - Save results in 4 files: pp, pr, rp, and rr
+				# - rename directory into the "processed" directory
 
 
 # with open('raw') as data_file:    
