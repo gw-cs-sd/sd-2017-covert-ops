@@ -14,8 +14,25 @@ import os;
 def press_to_press(dictionary):
 	results = [];
 	for n in range(0,len(dictionary['presses'])-1):
-		print (n)
 		results.append((dictionary['presses'][n+1][1] - dictionary['presses'][n][1])*1000);
+	return results;
+
+def press_to_release(dictionary):
+	results = [];
+	for n in range(0,len(dictionary['presses'])-1):
+		results.append((dictionary['releases'][n][1] - dictionary['presses'][n][1])*1000);
+	return results;
+
+def release_to_press(dictionary):
+	results = [];
+	for n in range(0,len(dictionary['releases'])-1):
+		results.append((dictionary['presses'][n+1][1] - dictionary['releases'][n][1])*1000);
+	return results;
+
+def release_to_release(dictionary):
+	results = [];
+	for n in range(0,len(dictionary['releases'])-1):
+		results.append((dictionary['releases'][n+1][1] - dictionary['releases'][n][1])*1000);
 	return results;
 
 
@@ -34,6 +51,17 @@ for dir in os.listdir('keystrokes/unprocessed'):
 				password = [n[0].replace("'","") for n in master['presses']];
 				# - Apply GREY-C functions to each raw file
 				p_to_p = press_to_press(master);
+				print ("\nPress To Press times:");
 				print (p_to_p);
+				p_to_r = press_to_release(master);
+				print ("\nPress To Release times:");
+				print (p_to_r);
+				r_to_p = release_to_press(master);
+				print ("\nRelease to Press times:");
+				print (r_to_p);
+				r_to_r = release_to_release(master);
+				print ("\nRelease to Release times:");
+				print (r_to_r);
+
 				# - Save results in 4 files: pp, pr, rp, and rr
 				# - rename directory into the "processed" directory
