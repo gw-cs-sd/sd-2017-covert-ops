@@ -1,0 +1,193 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '--global',
+1 verbose cli   'foundation-cli' ]
+2 info using npm@2.14.4
+3 info using node@v4.1.1
+4 verbose install initial load of /usr/local/lib/package.json
+5 verbose readDependencies loading dependencies from /usr/local/lib/package.json
+6 silly cache add args [ 'foundation-cli', null ]
+7 verbose cache add spec foundation-cli
+8 silly cache add parsed spec Result {
+8 silly cache add   raw: 'foundation-cli',
+8 silly cache add   scope: null,
+8 silly cache add   name: 'foundation-cli',
+8 silly cache add   rawSpec: '',
+8 silly cache add   spec: '*',
+8 silly cache add   type: 'range' }
+9 silly addNamed foundation-cli@*
+10 verbose addNamed "*" is a valid semver range for foundation-cli
+11 silly addNameRange { name: 'foundation-cli', range: '*', hasData: false }
+12 silly mapToRegistry name foundation-cli
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry uri https://registry.npmjs.org/foundation-cli
+16 verbose addNameRange registry:https://registry.npmjs.org/foundation-cli not in flight; fetching
+17 verbose request uri https://registry.npmjs.org/foundation-cli
+18 verbose request no auth needed
+19 info attempt registry request try #1 at 5:02:24 PM
+20 verbose request id 1ba9bfc90b2b7448
+21 http request GET https://registry.npmjs.org/foundation-cli
+22 http 200 https://registry.npmjs.org/foundation-cli
+23 silly get cb [ 200,
+23 silly get   { server: 'nginx/1.10.1',
+23 silly get     'content-type': 'application/json',
+23 silly get     'last-modified': 'Tue, 11 Oct 2016 21:33:21 GMT',
+23 silly get     etag: 'W/"57fd5aa1-6d72"',
+23 silly get     'content-encoding': 'gzip',
+23 silly get     'cache-control': 'max-age=300',
+23 silly get     'content-length': '4142',
+23 silly get     'accept-ranges': 'bytes',
+23 silly get     date: 'Sun, 05 Mar 2017 22:02:25 GMT',
+23 silly get     via: '1.1 varnish',
+23 silly get     age: '0',
+23 silly get     connection: 'keep-alive',
+23 silly get     'x-served-by': 'cache-iad2620-IAD',
+23 silly get     'x-cache': 'MISS',
+23 silly get     'x-cache-hits': '0',
+23 silly get     'x-timer': 'S1488751345.274519,VS0,VE42',
+23 silly get     vary: 'Accept-Encoding' } ]
+24 verbose get saving foundation-cli to /Users/joseph/.npm/registry.npmjs.org/foundation-cli/.cache.json
+25 silly addNameRange number 2 { name: 'foundation-cli', range: '*', hasData: true }
+26 silly addNameRange versions [ 'foundation-cli',
+26 silly addNameRange   [ '0.1.0',
+26 silly addNameRange     '0.2.0',
+26 silly addNameRange     '1.0.0-rc.1',
+26 silly addNameRange     '1.0.0',
+26 silly addNameRange     '1.0.1',
+26 silly addNameRange     '1.0.2',
+26 silly addNameRange     '1.0.3',
+26 silly addNameRange     '1.0.4',
+26 silly addNameRange     '1.1.0',
+26 silly addNameRange     '1.1.1',
+26 silly addNameRange     '1.1.2',
+26 silly addNameRange     '2.0.0-beta',
+26 silly addNameRange     '2.0.0-beta.2',
+26 silly addNameRange     '2.0.0-beta.3',
+26 silly addNameRange     '2.0.0-beta.4',
+26 silly addNameRange     '2.0.0',
+26 silly addNameRange     '2.0.1',
+26 silly addNameRange     '2.0.2',
+26 silly addNameRange     '2.1.0' ] ]
+27 silly addNamed foundation-cli@2.1.0
+28 verbose addNamed "2.1.0" is a plain semver version for foundation-cli
+29 silly mapToRegistry name foundation-cli
+30 silly mapToRegistry using default registry
+31 silly mapToRegistry registry https://registry.npmjs.org/
+32 silly mapToRegistry uri https://registry.npmjs.org/foundation-cli
+33 verbose addRemoteTarball https://registry.npmjs.org/foundation-cli/-/foundation-cli-2.1.0.tgz not in flight; adding
+34 verbose addRemoteTarball [ 'https://registry.npmjs.org/foundation-cli/-/foundation-cli-2.1.0.tgz',
+34 verbose addRemoteTarball   '329fab63a8976c5e724cd33e63c8e88aca2c0ff4' ]
+35 info retry fetch attempt 1 at 5:02:25 PM
+36 info attempt registry request try #1 at 5:02:25 PM
+37 http fetch GET https://registry.npmjs.org/foundation-cli/-/foundation-cli-2.1.0.tgz
+38 http fetch 200 https://registry.npmjs.org/foundation-cli/-/foundation-cli-2.1.0.tgz
+39 silly fetchAndShaCheck shasum 329fab63a8976c5e724cd33e63c8e88aca2c0ff4
+40 verbose addTmpTarball /var/folders/9z/ph94z_cn2cn0f6kn_2n4plbm0000gp/T/npm-36414-cbf344b5/registry.npmjs.org/foundation-cli/-/foundation-cli-2.1.0.tgz not in flight; adding
+41 verbose addTmpTarball already have metadata; skipping unpack for foundation-cli@2.1.0
+42 silly cache afterAdd foundation-cli@2.1.0
+43 verbose afterAdd /Users/joseph/.npm/foundation-cli/2.1.0/package/package.json not in flight; writing
+44 verbose afterAdd /Users/joseph/.npm/foundation-cli/2.1.0/package/package.json written
+45 silly install resolved [ { name: 'foundation-cli',
+45 silly install resolved     version: '2.1.0',
+45 silly install resolved     description: 'Command-line interface for the Foundation family of frameworks.',
+45 silly install resolved     keywords: [ 'foundation', 'cli', 'scaffold' ],
+45 silly install resolved     author:
+45 silly install resolved      { name: 'ZURB',
+45 silly install resolved        email: 'foundation@zurb.com',
+45 silly install resolved        url: 'http://zurb.com' },
+45 silly install resolved     main: 'lib/index.js',
+45 silly install resolved     bin: { foundation: './bin/foundation.js' },
+45 silly install resolved     dependencies:
+45 silly install resolved      { async: '^0.9.0',
+45 silly install resolved        bower: '^1.6.8',
+45 silly install resolved        colors: '^1.0.3',
+45 silly install resolved        inquirer: '^0.8.3',
+45 silly install resolved        'is-root': '^1.0.0',
+45 silly install resolved        multiline: '^1.0.2',
+45 silly install resolved        nopt: '^3.0.1',
+45 silly install resolved        npm: '^2.1.12',
+45 silly install resolved        'paint-by-number': '1.0.0',
+45 silly install resolved        rimraf: '^2.2.8',
+45 silly install resolved        semver: '^4.3.0',
+45 silly install resolved        'string-length': '^1.0.0',
+45 silly install resolved        'update-notifier': '^0.2.2',
+45 silly install resolved        which: '^1.0.8' },
+45 silly install resolved     homepage: 'http://foundation.zurb.com',
+45 silly install resolved     repository:
+45 silly install resolved      { type: 'git',
+45 silly install resolved        url: 'git+https://github.com/zurb/foundation-cli.git' },
+45 silly install resolved     bugs: { url: 'https://github.com/zurb/foundation-cli/issues' },
+45 silly install resolved     scripts: { test: 'node bin/foundation.js new' },
+45 silly install resolved     preferGlobal: true,
+45 silly install resolved     engines: { node: '>=0.10.33' },
+45 silly install resolved     license: 'MIT',
+45 silly install resolved     gitHead: '95dae39260a07bac58c322c5734d65f702aefa3b',
+45 silly install resolved     _id: 'foundation-cli@2.1.0',
+45 silly install resolved     _shasum: '329fab63a8976c5e724cd33e63c8e88aca2c0ff4',
+45 silly install resolved     _from: 'foundation-cli@*',
+45 silly install resolved     _npmVersion: '3.3.12',
+45 silly install resolved     _nodeVersion: '5.3.0',
+45 silly install resolved     _npmUser: { name: 'gakimball', email: 'geoff@zurb.com' },
+45 silly install resolved     dist:
+45 silly install resolved      { shasum: '329fab63a8976c5e724cd33e63c8e88aca2c0ff4',
+45 silly install resolved        tarball: 'https://registry.npmjs.org/foundation-cli/-/foundation-cli-2.1.0.tgz' },
+45 silly install resolved     maintainers: [ [Object], [Object], [Object] ],
+45 silly install resolved     _npmOperationalInternal:
+45 silly install resolved      { host: 'packages-5-east.internal.npmjs.com',
+45 silly install resolved        tmp: 'tmp/foundation-cli-2.1.0.tgz_1455747271891_0.18230518093332648' },
+45 silly install resolved     directories: {},
+45 silly install resolved     _resolved: 'https://registry.npmjs.org/foundation-cli/-/foundation-cli-2.1.0.tgz' } ]
+46 info install foundation-cli@2.1.0 into /usr/local/lib
+47 info installOne foundation-cli@2.1.0
+48 verbose installOne of foundation-cli to /usr/local/lib not in flight; installing
+49 verbose lock using /Users/joseph/.npm/_locks/foundation-cli-51ebe40b25d22b9e.lock for /usr/local/lib/node_modules/foundation-cli
+50 silly install write writing foundation-cli 2.1.0 to /usr/local/lib/node_modules/foundation-cli
+51 verbose unbuild lib/node_modules/foundation-cli
+52 silly gentlyRm /usr/local/lib/node_modules/foundation-cli is being purged from base /usr/local
+53 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/foundation-cli
+54 verbose tar unpack /Users/joseph/.npm/foundation-cli/2.1.0/package.tgz
+55 verbose tar unpacking to /usr/local/lib/node_modules/foundation-cli
+56 silly gentlyRm /usr/local/lib/node_modules/foundation-cli is being purged
+57 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/foundation-cli
+58 silly gunzTarPerm modes [ '755', '644' ]
+59 error tar.unpack untar error /Users/joseph/.npm/foundation-cli/2.1.0/package.tgz
+60 verbose unlock done using /Users/joseph/.npm/_locks/foundation-cli-51ebe40b25d22b9e.lock for /usr/local/lib/node_modules/foundation-cli
+61 verbose fstream_path /usr/local/lib/node_modules/foundation-cli
+62 verbose fstream_type Directory
+63 verbose fstream_class DirWriter
+64 verbose stack Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/foundation-cli'
+64 verbose stack     at Error (native)
+65 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25
+65 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53
+65 verbose fstream_stack FSReqWrap.oncomplete (fs.js:82:15)
+66 verbose cwd /Users/joseph/Documents/sd-2017-covert-ops/joe/web
+67 error Darwin 15.6.0
+68 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "--global" "foundation-cli"
+69 error node v4.1.1
+70 error npm  v2.14.4
+71 error path /usr/local/lib/node_modules/foundation-cli
+72 error code EACCES
+73 error errno -13
+74 error syscall mkdir
+75 error Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/foundation-cli'
+75 error     at Error (native)
+75 error  { [Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/foundation-cli']
+75 error   errno: -13,
+75 error   code: 'EACCES',
+75 error   syscall: 'mkdir',
+75 error   path: '/usr/local/lib/node_modules/foundation-cli',
+75 error   fstream_type: 'Directory',
+75 error   fstream_path: '/usr/local/lib/node_modules/foundation-cli',
+75 error   fstream_class: 'DirWriter',
+75 error   fstream_stack:
+75 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25',
+75 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53',
+75 error      'FSReqWrap.oncomplete (fs.js:82:15)' ] }
+76 error Please try running this command again as root/Administrator.
+77 verbose exit [ -13, true ]
+78 verbose unbuild lib/node_modules/foundation-cli
+79 silly gentlyRm /usr/local/lib/node_modules/foundation-cli is being purged from base /usr/local
+80 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/foundation-cli

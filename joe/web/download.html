@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css">
+	</head>
+	<body>
+		<div class="row">
+			<textarea id="textbox" placeholder="Type something here"></textarea>
+			<a class="button" id="create">Create file</a>
+			<a download="info.txt" id="downloadlink" style="display: none">Download</a>
+		</div>
+		<div class="row">
+			<ul class="tabs" data-tabs id="example-tabs">
+			  <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Tab 1</a></li>
+			  <li class="tabs-title"><a href="#panel2">Tab 2</a></li>
+			  <li class="tabs-title"><a href="#panel3">Tab 3</a></li>
+			</ul>
+			<div class="tabs-content" data-tabs-content="example-tabs">
+			  <div class="tabs-panel is-active" id="panel1">
+			    <p>one</p>
+			    <p>Check me out! I'm a super cool Tab panel with text content!</p>
+			  </div>
+			  <div class="tabs-panel" id="panel2">
+			    <p>two</p>
+			    <img class="thumbnail" src="assets/img/generic/rectangle-7.jpg">
+			  </div>
+			  <div class="tabs-panel" id="panel3">
+			    <p>three</p>
+			    <p>Check me out! I'm a super cool Tab panel with text content!</p>
+			  </div>
+			  <div class="tabs-panel" id="panel4">
+			    <p>four</p>
+			    <img class="thumbnail" src="assets/img/generic/rectangle-2.jpg">
+			  </div>
+			  <div class="tabs-panel" id="panel5">
+			    <p>five</p>
+			    <p>Check me out! I'm a super cool Tab panel with text content!</p>
+			  </div>
+			  <div class="tabs-panel" id="panel6">
+			    <p>six</p>
+			    <img class="thumbnail" src="assets/img/generic/rectangle-8.jpg">
+			  </div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="download.js"></script>
+	<script tyle="text/javascript" src="generate_config.js"></script>
+	<script tyle="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/foundation.min.js"></script>
+</html>
