@@ -1,11 +1,16 @@
+values = {};
+
+// Keystroke Detection
+// jQuery('.slider.keystroke_dynamics input').value();
+values['keystroke_dynamics'] = {};
+
+jQuery('.slider.keystroke_dynamics').on('moved.zf.slider',function(){
+	new_kb_val = jQuery(this).find("input").first().attr("value");
+	values['keystroke_dynamics']['accuracy'] = new_kb_val;
+	update_config();
+});
 
 
-// http://stackoverflow.com/questions/1184624/convert-form-data-to-javascript-object-with-jquery
-function objectifyForm(formArray) {//serialize data function
-
-  returnArray = {};
-  for (var i = 0; i < formArray.length; i++){
-    returnArray[formArray[i]['name']] = formArray[i]['value'];
-  }
-  return returnArray;
+function update_config(){
+	jQuery('#config').html(JSON.stringify(values));
 }

@@ -4,9 +4,9 @@
 	</head>
 	<body>
 		<div class="row">
-			<textarea id="textbox" placeholder="Type something here"></textarea>
+			<textarea id="config" placeholder="Type something here"></textarea>
 			<a class="button" id="create">Create file</a>
-			<a download="info.txt" id="downloadlink" style="display: none">Download</a>
+			<a download="covertops.conf" id="downloadlink" style="display: none">Download</a>
 		</div>
 		<div class="row">
 			<div class="column medium-4">
@@ -20,7 +20,8 @@
 				<div class="tabs-content" data-tabs-content="example-tabs">
 				  <div class="tabs-panel is-active" id="panel1">
 				    <h4>Keystroke Dynamics</h4>
-				    <div class="slider" data-slider data-initial-start='50' data-end='100'>
+				    <label>Minimum accuracy</label>
+				    <div class="slider keystroke_dynamics" data-slider data-initial-start='50' data-end='100'>
 					  <span class="slider-handle"  data-slider-handle role="slider" tabindex="1"></span>
 					  <span class="slider-fill" data-slider-fill></span>
 					  <input type="hidden">
@@ -39,9 +40,9 @@
 	</body>
 	<script tyle="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/foundation.min.js"></script>
-	<!-- <script type="text/javascript" src="download.js"></script> -->
-	<!-- <script tyle="text/javascript" src="generate_config.js"></script> -->
 	<script>
 		jQuery(document).foundation();
 	</script>
+	<script type="text/javascript" src="download.js"></script>
+	<script tyle="text/javascript" src="generate_config.js"></script>
 </html>
