@@ -9,41 +9,51 @@
 			<a download="info.txt" id="downloadlink" style="display: none">Download</a>
 		</div>
 		<div class="row">
-			<ul class="tabs" data-tabs id="example-tabs">
-			  <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Tab 1</a></li>
-			  <li class="tabs-title"><a href="#panel2">Tab 2</a></li>
-			  <li class="tabs-title"><a href="#panel3">Tab 3</a></li>
-			</ul>
-			<div class="tabs-content" data-tabs-content="example-tabs">
-			  <div class="tabs-panel is-active" id="panel1">
-			    <p>one</p>
-			    <p>Check me out! I'm a super cool Tab panel with text content!</p>
-			  </div>
-			  <div class="tabs-panel" id="panel2">
-			    <p>two</p>
-			    <img class="thumbnail" src="assets/img/generic/rectangle-7.jpg">
-			  </div>
-			  <div class="tabs-panel" id="panel3">
-			    <p>three</p>
-			    <p>Check me out! I'm a super cool Tab panel with text content!</p>
-			  </div>
-			  <div class="tabs-panel" id="panel4">
-			    <p>four</p>
-			    <img class="thumbnail" src="assets/img/generic/rectangle-2.jpg">
-			  </div>
-			  <div class="tabs-panel" id="panel5">
-			    <p>five</p>
-			    <p>Check me out! I'm a super cool Tab panel with text content!</p>
-			  </div>
-			  <div class="tabs-panel" id="panel6">
-			    <p>six</p>
-			    <img class="thumbnail" src="assets/img/generic/rectangle-8.jpg">
-			  </div>
+			<div class="column medium-4">
+				<ul class="tabs vertical" data-tabs id="example-tabs">
+				  <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Keystroke Dynamics</a></li>
+				  <li class="tabs-title"><a href="#panel2">Signature Recognition</a></li>
+				  <li class="tabs-title"><a href="#panel3">+ New Authentication Factor</a></li>
+				</ul>
+			</div>
+			<div class="column medium-8">
+				<div class="tabs-content" data-tabs-content="example-tabs">
+				  <div class="tabs-panel is-active" id="panel1">
+				    <h4>Keystroke Dynamics</h4>
+				    <div class="slider" data-slider data-initial-start='50' data-end='100'>
+					  <span class="slider-handle"  data-slider-handle role="slider" tabindex="1"></span>
+					  <span class="slider-fill" data-slider-fill></span>
+					  <input type="hidden">
+					</div>
+				  </div>
+				  <div class="tabs-panel" id="panel2">
+				    <p>two</p>
+				  </div>
+				  <div class="tabs-panel" id="panel3">
+				    <p>three</p>
+				    <p>Check me out! I'm a super cool Tab panel with text content!</p>
+				  </div>
+				</div>
 			</div>
 		</div>
 	</body>
-	<script type="text/javascript" src="download.js"></script>
-	<script tyle="text/javascript" src="generate_config.js"></script>
 	<script tyle="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/foundation.min.js"></script>
+	<!-- <script type="text/javascript" src="download.js"></script> -->
+	<!-- <script tyle="text/javascript" src="generate_config.js"></script> -->
+	<script>
+
+		// fix tabs
+		jQuery('.tabs-title a').click(function(){
+			// oldTab = jQuery('.tabs-title.is-active');
+			// oldTab.find('a').attr("aria-selected","false");
+			// oldTab.removeClass('is-active');
+			// jQuery(this).parent().addClass("is-active").find('a').attr("aria-selected","true");
+			// jQuery('.tabs-content .tabs-panel').removeClass('is-active').hide();
+			// panel = this.hash.replace("#panel","");
+			// jQuery('.tabs-panel#panel'+panel).show();
+		});
+		// jQuery('#panel1').show();
+		jQuery(document).foundation();
+	</script>
 </html>
