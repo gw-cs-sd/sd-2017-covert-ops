@@ -5,7 +5,7 @@
 	<body>
 		<div class="row">
 			<textarea id="config" placeholder="Type something here"></textarea>
-			<a class="button" id="create">Create file</a>
+			<a class="button" id="create" >Create file</a>
 			<a download="covertops.conf" id="downloadlink" style="display: none">Download</a>
 		</div>
 		<div class="row">
@@ -28,7 +28,13 @@
 					</div>
 				  </div>
 				  <div class="tabs-panel" id="panel2">
-				    <p>two</p>
+				    <h4>Signature Recognition</h4>
+				    <label>Minimum accuracy</label>
+				    <div class="slider signature_recognition" data-slider data-initial-start='50' data-end='100'>
+					  <span class="slider-handle"  data-slider-handle role="slider" tabindex="1"></span>
+					  <span class="slider-fill" data-slider-fill></span>
+					  <input type="hidden">
+					</div>
 				  </div>
 				  <div class="tabs-panel" id="panel3">
 				    <p>three</p>
