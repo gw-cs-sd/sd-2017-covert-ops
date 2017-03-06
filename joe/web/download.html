@@ -4,15 +4,24 @@
 	</head>
 	<body>
 		<div class="row">
-			<textarea id="config" placeholder="Type something here"></textarea>
-			<a class="button" id="create" >Save</a>
+			<div class="column medium-12">
+				<h1>CovertOps Admin Panel</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="column medium-12">
+				<textarea id="config" placeholder="Type something here"></textarea>
+				<a class="button" id="create" >Save</a>
+			</div>
 		</div>
 		<div class="row">
 			<div class="column medium-4">
-				<ul class="tabs vertical" data-tabs id="example-tabs">
-				  <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Keystroke Dynamics</a></li>
-				  <li class="tabs-title"><a href="#panel2">Signature Recognition</a></li>
-				  <li class="tabs-title"><a href="#panel3">+ New Authentication Factor</a></li>
+				<ul class="tabs vertical sortable" data-tabs id="example-tabs">
+				  <li class="tabs-title auth-factor is-active"><a href="#panel1" aria-selected="true">Keystroke Dynamics</a></li>
+				  <li class="tabs-title auth-factor"><a href="#panel2">Signature Recognition</a></li>
+				</ul>
+				<ul class="tabs vertical sortable" data-tabs id="edit-tabs">
+					<li class="tabs-title"><a href="#panel3">+ New Authentication Factor</a></li>
 				</ul>
 			</div>
 			<div class="column medium-8">
@@ -50,4 +59,11 @@
 	</script>
 	<script tyle="text/javascript" src="generate_config.js"></script>
 	<script type="text/javascript" src="download.js"></script>
+	<script src="jquery.sortable.min.js"></script>
+	<script>
+	    jQuery('.sortable').sortable();
+	    $('.sortable').sortable().bind('sortupdate', function() {
+		    update_config();
+		});
+	</script>
 </html>

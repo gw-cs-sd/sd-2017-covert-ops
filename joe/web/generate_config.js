@@ -1,9 +1,8 @@
 values = {};
+values['keystroke_dynamics'] = {"order": 1};
+values['signature_recognition'] = {"order": 2};
 
-// Keystroke Detection
-// jQuery('.slider.keystroke_dynamics input').value();
-values['keystroke_dynamics'] = {};
-values['signature_recognition'] = {};
+jQuery('#config').html(JSON.stringify(values));
 
 jQuery('.slider.keystroke_dynamics').on('moved.zf.slider',function(){
 	new_kb_val = jQuery('.slider.keystroke_dynamics').find("input").first().attr("value");
@@ -17,7 +16,15 @@ jQuery('.slider.signature_recognition').on('moved.zf.slider',function(){
 });
 
 function update_config(){
+	console.log("update");
 	jQuery('#config').html(JSON.stringify(values));
+	// update order
+	jQuery('.auth-factor a').each(function(a){
+		order = jQuery(this).parent().index();
+		console.log(this.innerText.toString().toLowerCase().replace(" ","_") + " " +order)
+		current_auth_factor = this.innerText.toString().toLowerCase().replace(" ","_");
+		values[current_auth_factor]["order"] = order;
+	});
 }
 
 var dlAnchorElem = document.getElementById('create');
