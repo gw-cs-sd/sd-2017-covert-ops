@@ -19,3 +19,10 @@ jQuery('.slider.signature_recognition').on('moved.zf.slider',function(){
 function update_config(){
 	jQuery('#config').html(JSON.stringify(values));
 }
+
+var dlAnchorElem = document.getElementById('create');
+jQuery(dlAnchorElem).click(function(){
+	var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(values));
+	dlAnchorElem.setAttribute("href",     dataStr     );
+	dlAnchorElem.setAttribute("download", "covertops.conf");
+});
