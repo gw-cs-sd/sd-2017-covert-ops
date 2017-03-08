@@ -8,3 +8,7 @@ describe overarching plan
 
 
 1776 and Incubator events
+
+JPype to call Java code
+
+Script to run admin panel on SimpleWebServer and check for resultant config download to move to appropriate directory
