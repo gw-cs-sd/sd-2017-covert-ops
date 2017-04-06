@@ -8,6 +8,8 @@ import json;
 t0 = str(time.time());
 print ("This must be run as sudo!");
 user = input('What is your username?');
+if not os.path.exists("keystrokes/unprocessed/"+user):
+	os.makedirs("keystrokes/unprocessed/"+user);
 if not os.path.exists("keystrokes/unprocessed/"+user+"/"+t0):
 	os.makedirs("keystrokes/unprocessed/"+user+"/"+t0);
 raw = open("keystrokes/unprocessed/"+user+"/"+t0+"/raw", 'w+');
