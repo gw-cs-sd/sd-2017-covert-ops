@@ -576,10 +576,10 @@ public class DigitalSignature extends Signature {
 		// Evaluate the model using the decision tree and data provided at the top from iris
 		eval.evaluateModel(tree, testdataset);
 		
-		System.out.println(eval.toSummaryString("Evaluation results:\n", false));
+		//System.out.println(eval.toSummaryString("Evaluation results:\n", false));
 		
 		// Statistics that can be used for the percentage of correct, incorrect, error rate, and more
-		
+		/*
 		System.out.println("Correct % = "+eval.pctCorrect());
 		System.out.println("Incorrect % = "+eval.pctIncorrect());
 		System.out.println("AUC = "+eval.areaUnderROC(1));
@@ -593,7 +593,8 @@ public class DigitalSignature extends Signature {
 		System.out.println("fMeasure = "+eval.fMeasure(1));
 		System.out.println("Error Rate = "+eval.errorRate());
 		System.out.println("");
-	    //the confusion matrix
+		*/
+	    	//the confusion matrix
 		//System.out.println(eval.toMatrixString("=== Overall Confusion Matrix ===\n"));
 		
 		if (eval.pctCorrect() >= 80.0) {
